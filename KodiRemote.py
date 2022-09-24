@@ -1,3 +1,7 @@
+# By Mystic
+# https://github.com/sudo-Mystic/ArduinoBasedKodiRemote/
+
+
 # Importing Libraries
 import serial
 from time import sleep
@@ -7,12 +11,12 @@ from kodijson import Kodi
 arduino = serial.Serial(port='/dev/ttyACM0', baudrate=115200, timeout=.1)
 sleep(2)
 
-kodi = Kodi("http://192.168.29.113:8080/jsonrpc")
+kodi = Kodi("http://192.168.29.113:8080/jsonrpc") #Local IP of Machine running Kodi
 
 while True:
  value = arduino.readline().decode('utf-8').strip()
  
- if(0 < len(value)):
+ if(0 < len(value)):     # These command are according to my need , update it according to your need
   print(value.strip())
   if value == "6F9FA05":
    
