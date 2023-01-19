@@ -1,10 +1,9 @@
-# ArduinoBasedKodiRemote
-Kodi Remote based on arduino uno , which utilises pyserial to communicate with arduino connect 
+1. Download the ArduinoBasedKodiRemote repository to your computer, and make sure to install all necessary dependencies.
 
-TO INSTALL IT
+2 Open the IRTransmitter sketch in the Arduino IDE and upload it to the Arduino board, connecting the IR module to the appropriate pins (such as Vcc to 3.3v, GND to GND, and SIG to Pin 8 for an Arduino UNO. If you're using a different model, make sure to adjust the connections accordingly.
 
-1: Copy the repo to your computer, make sure to download all dependencies
-2: Upload the IRTransmitter Sketch to the Arduino , (i am using Arduino UNO so i connected my ir module according to it [vcc -> 3.3v , gnd -> gnd , sig -> Pin 8] update if you're using different model)
-3: this remote the KodiRemote.py script to be running in background to work , this python script recieves the hex codes of our ir remote then according to it sends commands to kodi
+3. In order for the remote to function properly, run the KodiRemote.py script in the background. This script receives the hex codes from the IR remote and sends the corresponding commands to Kodi.
 
-Update variable according to your setup
+4. Make sure to update the IP address of your Kodi device and the hex codes according to your IR remote in the KodiRemote.py script for it to work properly with your setup.
+
+Note:- Tried to optimise the code little bit , dont know if it work fine or not , you can check it by using OptimisedDecoder.py
